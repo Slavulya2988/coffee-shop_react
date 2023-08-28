@@ -9,12 +9,12 @@ import Footer from '../footer/footer';
 function App() {
 
     const data = [
-        {productName: 'Aromatico', productType: 'Coffee', productWeight: '1 kg', country: 'Brazil', price: '6.99'},
-        {productName: 'Puzanno', productType: 'Coffee', productWeight: '1 kg', country: 'Brazil', price: '6.99'},
-        {productName: 'Truffalo', productType: 'Coffee', productWeight: '1 kg', country: 'Kenya', price: '8.99'},
-        {productName: 'Basttardo', productType: 'Coffee', productWeight: '1 kg', country: 'Kenya', price: '8.99'},
-        {productName: 'Grinadgo', productType: 'Coffee', productWeight: '1 kg', country: 'Columbia', price: '16.99'},
-        {productName: 'Lafaretto', productType: 'Coffee', productWeight: '1 kg', country: 'Columbia', price: '16.99'}
+        {productName: 'Aromatico', productType: 'Coffee', productWeight: '1 kg', country: 'Brazil', price: '6.99', id: 1},
+        {productName: 'Puzanno', productType: 'Coffee', productWeight: '1 kg', country: 'Brazil', price: '6.99', id: 2},
+        {productName: 'Truffalo', productType: 'Coffee', productWeight: '1 kg', country: 'Kenya', price: '8.99', id: 3},
+        {productName: 'Basttardo', productType: 'Coffee', productWeight: '1 kg', country: 'Kenya', price: '8.99', id: 4},
+        {productName: 'Grinadgo', productType: 'Coffee', productWeight: '1 kg', country: 'Columbia', price: '16.99', id: 5},
+        {productName: 'Lafaretto', productType: 'Coffee', productWeight: '1 kg', country: 'Columbia', price: '16.99', id: 6}
     ]
 
 

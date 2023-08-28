@@ -4,8 +4,10 @@ import './catalog.css';
 
 const Catalog = ({data}) => {
 
-    const cards = data.map( item => {
-        return  <CatalogItem {...item}/>
+    const cards = data.map(item => {
+		const {id, ...itemProps} = item;
+
+        return  <CatalogItem key= {id} {...itemProps}/>
     })
     /*
     {...item}
