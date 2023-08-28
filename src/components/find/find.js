@@ -6,7 +6,7 @@ const Find = () => {
         <div className="find__container">
             <form action="#" className="find__form">
                 <div className="form__seek">
-                    <label for="seek">Lookiing for</label>
+                    <div htmlFor="seek">Lookiing for</div>
                     <input name="seek" type="text" placeholder="start typing here..."/>
                 </div>
                 <div className="form__filter">

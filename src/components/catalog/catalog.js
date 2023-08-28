@@ -1,95 +1,27 @@
+import CatalogItem from '../catalog-item/catalog-item';
 import './catalog.css';
-import coffee from './coffe.jpg';
 
-const Catalog = () => {
+
+const Catalog = ({data}) => {
+
+    const cards = data.map( item => {
+        return  <CatalogItem {...item}/>
+    })
+    /*
+    {...item}
+   аналогічна структура
+    productName={item.productName}
+    productType={item.productType}
+    productWeight={item.productWeight}
+    country={item.country}
+    price={item.price}
+    */
+
     return (
         <div className="catalog">
             <div className="catalog__container">
                 <div className="catalog__items">
-                    <a href="#" className="catalog__item">
-                        <div className="catalog__item-img">
-                            <img src={coffee} alt=""/>
-                        </div>
-                        <div className="catalog_item-header">
-                            AROMISTICO Coffee 1 kg
-                        </div>
-                        <div className="catalog__item-country">
-                            Brazil
-                        </div>
-                        <div className="catalog__item-price">
-                            6.99$
-                        </div>
-                    </a>
-                    <a href="#"  className="catalog__item">
-                        <div className="catalog__item-img">
-                            <img src={coffee} alt=""/>
-                        </div>
-                        <div className="catalog_item-header">
-                            AROMISTICO Coffee 1 kg
-                        </div>
-                        <div className="catalog__item-country">
-                            Brazil
-                        </div>
-                        <div className="catalog__item-price">
-                            6.99$
-                        </div>
-                    </a>
-                    <a href="#"  className="catalog__item">
-                        <div className="catalog__item-img">
-                            <img src={coffee} alt=""/>
-                        </div>
-                        <div className="catalog_item-header">
-                            AROMISTICO Coffee 1 kg
-                        </div>
-                        <div className="catalog__item-country">
-                            Brazil
-                        </div>
-                        <div className="catalog__item-price">
-                            6.99$
-                        </div>
-                    </a>
-                    <a href="#"  className="catalog__item">
-                        <div className="catalog__item-img">
-                            <img src={coffee} alt=""/>
-                        </div>
-                        <div className="catalog_item-header">
-                            AROMISTICO Coffee 1 kg
-                        </div>
-                        <div className="catalog__item-country">
-                            Brazil
-                        </div>
-                        <div className="catalog__item-price">
-                            6.99$
-                        </div>
-                    </a>
-                    <a href="#"  className="catalog__item">
-                        <div className="catalog__item-img">
-                            <img src={coffee} alt=""/>
-                        </div>
-                        <div className="catalog_item-header">
-                            AROMISTICO Coffee 1 kg
-                        </div>
-                        <div className="catalog__item-country">
-                            Brazil
-                        </div>
-                        <div className="catalog__item-price">
-                            6.99$
-                        </div>
-                    </a>
-                    <a href="#"  className="catalog__item">
-                        <div className="catalog__item-img">
-                            <img src={coffee} alt=""/>
-                        </div>
-                        <div className="catalog_item-header">
-                            AROMISTICO Coffee 1 kg
-                        </div>
-                        <div className="catalog__item-country">
-                            Brazil
-                        </div>
-                        <div className="catalog__item-price">
-                            6.99$
-                        </div>
-                    </a>
+                   {cards}
                 </div>
             </div>
     </div>

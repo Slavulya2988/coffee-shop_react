@@ -1,6 +1,5 @@
 /*FORM FILTER*/
-.find {
-}
+
 .find__form {
     padding: 2.5rem 0rem 2.5rem 2.5rem;
     display: flex;
@@ -10,7 +9,10 @@
     row-gap: 2.5rem;
 
 }
-.form__seek {
+.form__seek{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .form__seek input{
     margin-left: 1.1875rem;
