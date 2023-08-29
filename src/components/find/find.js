@@ -1,24 +1,69 @@
+import { Component } from 'react';
 import './find.css';
 
-const Find = () => {
-    return (
-        <div className="find">
-        <div className="find__container">
-            <form action="#" className="find__form">
-                <div className="form__seek">
-                    <div htmlFor="seek">Lookiing for</div>
-                    <input name="seek" type="text" placeholder="start typing here..."/>
+class Find extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            term: ''
+        }
+        this.buttonsDB = [
+            { name: 'Brazil' },
+            { name: 'Kenya' },
+            { name: 'Columbia'},
+            { name: 'All'}
+        ]
+
+    }
+
+    onUpdateInput = (e) => {
+        const term = e.target.value;
+        this.setState({term});
+        this.props.onUpdateSearch(term);
+
+    }
+
+    render(){
+
+    const buttons = () => {
+     return   this.buttonsDB.map( ({name}) => {
+        const active = this.props.filter === name;
+        const clazz = active ? 'filter__button active' : 'filter__button';
+              return (
+                  <button type="button"
+                          className={clazz}
+                          key = {name}
+                          onClick={() => this.props.onSelectFilter(name)}
+                          >
+                          {name}
+                  </button>
+              )
+          })
+      }
+        return (
+            <div className="find">
+            <div className="find__container">
+                <div className="find__form">
+                    <div className="form__seek">
+                        <div htmlFor="seek">Lookiing for</div>
+
+                        <input  type="text"
+                                name="seek"
+                                value={this.state.term}
+                                onChange={this.onUpdateInput} /* підніття локального стану до родительского */
+                                placeholder="start typing here..."/>
+
+                    </div>
+
+                    <div className="form__filter filter">
+                        <div className="filter__label">Or filter</div>
+                        {buttons()}
+                    </div>
                 </div>
-                <div className="form__filter">
-                    <div className="filter__label">Or filter</div>
-                    <button type="submit" className="filter__button">Brazil</button>
-                    <button type="submit" className="filter__button">Kenya</button>
-                    <button type="submit" className="filter__button">Columbia</button>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
-    )
+        )
+    }
 }
 
 export default Find;
